@@ -485,6 +485,9 @@ a:hover {
 }
 
 @media (max-width: 576px) {
+	.mr-sm-0 {
+		margin-right: 0;
+	}
 	.mr-sm-4 {
 		margin-right: 16px;
 	}
@@ -610,6 +613,12 @@ a:hover {
 	font: inherit;
 }
 
+@media (max-width: 576px) {
+	.btn {
+		padding: 8px 12px;
+	}
+}
+
 .btn-dark {
 	background-color: var(--neutral-900);
 	color: var(--neutral-0);
@@ -624,6 +633,13 @@ a:hover {
     padding-bottom: 48px;
     margin-bottom: 48px;
     border-bottom: 1px solid #DEE2E6;
+}
+
+@media (max-width: 767px) {
+	.section-decoration {
+		padding-bottom: 32px;
+		margin-bottom: 32px;
+	}
 }
 
 .li-decoration {
