@@ -105,7 +105,9 @@ a:hover {
 /* 通用樣式 */
 .container {
 	margin: 0 auto; 
-	max-width: 1296px;
+	max-width: 1320px;
+	padding-left: 12px;
+	padding-right: 12px;
 }
 
 .row {
@@ -213,6 +215,12 @@ a:hover {
 	gap: 8px;
 }
 
+.h1 {
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
 .h2 {
 	font-size: 32px;
 	font-weight: 700;
@@ -254,6 +262,10 @@ a:hover {
 	line-height: 1.5;
 }
 
+.text-neutral-0 {
+	color: var(--neutral-0)
+}
+
 .text-primary-400 {
 	color: var(--primary-400 )
 }
@@ -272,6 +284,14 @@ a:hover {
 
 .text-danger-300 {
 	color: var(--danger-300 )
+}
+
+.text-center {
+	text-align: center;
+}
+
+.bg-primary-100 {
+	background-color: var(--primary-100);
 }
 
 .bg-primary-200 {
@@ -402,6 +422,10 @@ a:hover {
 	padding: 12px;
 }
 
+.pb-12 {
+	padding-bottom: 48px;
+}
+
 /* component */
 .breadcrumb-list + .breadcrumb-list::before {
 	content: '/';
@@ -438,6 +462,16 @@ a:hover {
 	border: 1px solid var(--neutral-900);
 }
 
+.section-decoration {
+    padding-bottom: 48px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid #DEE2E6;
+}
+
+.li-decoration {
+	padding-left: 12px;
+	border-left: 1px solid var(--neutral-300);
+}
 
 .footer .text {
     padding-top: 32px;
