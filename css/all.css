@@ -191,8 +191,66 @@ a:hover {
 	width: 100%;
 }
 
+@media (max-width: 768px) {
+	.row {
+		margin-left: -6px;
+		margin-right: -6px;
+		display: flex;
+	}
+	.col-md-1 {
+		padding-left: 6px;
+		padding-right: 6px;
+		width: calc(100% / 4);
+	}
+	.col-md-2 {
+		padding-left: 6px;
+		padding-right: 6px;
+		width: calc(100% / 2);
+	}
+	.col-md-3 {
+		padding-left: 6px;
+		padding-right: 6px;
+		width: calc(100% / 3);
+	}
+	.col-md-4 {
+		padding-left: 6px;
+		padding-right: 6px;
+		width: 100%;
+	}	
+}
+
+
+
+
+
 .d-flex {
 	display: flex;
+}
+
+.d-none {
+	display: none;
+}
+
+.d-block {
+	display: block;
+}
+
+@media (max-width: 768px) {
+	.d-md-block {
+		display: block;
+	}
+	.d-md-none {
+		display: none;
+	}
+}
+
+@media (max-width: 576px) {
+	.d-sm-block {
+		display: block;
+	}
+	.d-sm-none {
+		display: none;
+	}
 }
 
 .justify-between {
@@ -261,6 +319,43 @@ a:hover {
 	font-weight: 400;
 	line-height: 1.5;
 }
+
+@media(max-width: 767px) {
+	.h3-md {
+		font-size: 28px;
+	}
+	
+	.h4-md {
+		font-size: 24px;
+	}
+
+	.h5-md {
+		font-size: 20px;
+	}
+
+	.h6-md {
+		font-size: 16px;
+	}
+}
+
+@media(max-width: 576px) {
+	.h3-sm {
+		font-size: 28px;
+	}
+	.h4-sm {
+		font-size: 24px;
+	}
+
+	.h5-sm {
+		font-size: 20px;
+	}
+
+	.h6-sm {
+		font-size: 16px;
+	}
+	
+}
+
 
 .text-neutral-0 {
 	color: var(--neutral-0)
@@ -370,6 +465,38 @@ a:hover {
 	margin-right: 48px;
 }
 
+
+@media (max-width: 768px) {
+	.mr-md-2 {
+		margin-right: 8px;
+	}
+	.mr-md-4 {
+		margin-right: 16px;
+	}
+	.mb-md-4 {
+		margin-bottom: 16px;
+	}
+	.mb-md-6 {
+		margin-bottom: 24px;
+	}
+	.mb-md-8 {
+		margin-bottom: 32px;
+	}
+}
+
+@media (max-width: 576px) {
+	.mr-sm-4 {
+		margin-right: 16px;
+	}
+	.mb-sm-1 {
+		margin-bottom: 4px;
+	}
+	.mb-sm-2 {
+		margin-bottom: 8px;
+	}
+}
+
+
 .py-2 {
 	padding: 8px 0;
 }
@@ -425,6 +552,31 @@ a:hover {
 .pb-12 {
 	padding-bottom: 48px;
 }
+
+@media (max-width: 768px) {
+	.px-md-3 {
+		padding: 0 12px;
+	}
+	.py-md-8 {
+		padding: 32px 0px;
+	}
+	.pb-md-8 {
+		padding-bottom: 32px;
+	}
+}
+
+@media (max-width: 576px) {
+	.px-sm-3 {
+		padding: 0 12px;
+	}
+	.py-sm-8 {
+		padding: 32px 0px;
+	}
+	.pb-sm-8 {
+		padding-bottom: 32px;
+	}
+}
+
 
 /* component */
 .breadcrumb-list + .breadcrumb-list::before {
