@@ -1,0 +1,18 @@
+@mixin media-down($name) {
+    @media (max-width: map-get($breakpoints, $name)) {
+        @content;
+    }
+}
+
+@mixin make-col($size, $columns: $grid-columns) {
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
+    width: calc(100% / #{$columns} * #{$size});
+}
+
+@mixin make-col-responsive($size, $gutter: $grid-gutter-mobile) {
+    padding-left: $gutter;
+    padding-right: $gutter;
+    width: calc(100% / 4 * #{$size});
+}
+

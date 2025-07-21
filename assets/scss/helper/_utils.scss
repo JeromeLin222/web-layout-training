@@ -1,0 +1,203 @@
+
+/* 通用樣式 */
+.container {
+	margin: 0 auto; 
+	max-width: 1320px;
+	padding-left: $grid-gutter;
+	padding-right: $grid-gutter;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -$grid-gutter;
+	margin-left: -$grid-gutter;
+
+	@include media-down(md) {
+		margin-right: -$grid-gutter-mobile;
+		margin-left: -$grid-gutter-mobile;
+	}
+}
+
+// grid system
+// laptop
+@for $i from 1 through $grid-columns {
+	.col-#{$i} {
+		@include make-col($i);
+	}
+}
+
+// mobile grid
+@include media-down(md) {
+	.col-md-1 { @include make-col-responsive(1); }
+	.col-md-2 { @include make-col-responsive(2); }
+	.col-md-3 { @include make-col-responsive(3); }
+	.col-md-4 { @include make-col-responsive(4); }
+}
+
+// display tools
+$displays: (flex, none, block);
+
+@each $display in $displays {
+	.d-#{$display} {
+		display: $display
+	}
+}
+
+@include media-down(md) {
+	.d-md-block { display: block; }
+	.d-md-none { display: none; }
+}
+
+@include media-down(sm) {
+	.d-sm-block { display: block; }
+	.d-sm-none { display: none; }
+}
+
+// flex tools
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.align-center { align-items: center; }
+.flex-wrap { flex-wrap: wrap; }
+
+.gap-8 { gap: 8px; }
+
+
+// text style
+@each $name, $size in $font-sizes {
+	.#{$name} {
+		font-size: $size;
+		@if $name != 'sm' {
+			font-weight: 700;
+			line-height: 1.2;
+		} @else {
+			font-weight: 400;
+			line-height: 1.5;
+		}
+	}
+}
+
+.text-md {
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+@include media-down(md) {
+	@each $name, $size in $font-sizes {
+		.#{$name}-md {
+			font-size: $size;
+		}
+	}
+}
+
+@include media-down(sm) {
+	@each $name, $size in $font-sizes {
+		.#{$name}-sm {
+			font-size: $size;
+		}
+	}
+}
+
+
+$text-colors: (
+	'neutral-0': $neutral-0,
+	'primary-400': $primary-400,
+	'neutral-500': $neutral-500,
+	'neutral-600': $neutral-600,
+	'neutral-900': $neutral-900,
+	'danger-300': $danger-300
+);
+
+
+@each $name, $color in $text-colors {
+	.text-#{$name} {
+		color: $color;
+	}
+}
+
+.text-center { text-align: center;}
+
+$bg-colors: (
+	'primary-100': $primary-100,
+	'primary-200': $primary-200,
+	'neutral-100': $neutral-100
+);
+
+@each $name, $color in $bg-colors {
+	.bg-#{$name} {
+		background-color: $color;
+	}
+}
+
+//spacing tools
+@each $name, $size in $spacers {
+	.mr-#{$name} { margin-right: $size; }
+	.mb-#{$name} {margin-bottom: $size;}
+}
+
+@include media-down(md) {
+	.mr-md-2 {margin-right: 8px;}
+	.mr-md-4 {margin-right: 16px;}
+	@each $name, $size in $spacers {
+		.mb-md-#{$name} { margin-bottom: $size; }
+	}
+}
+
+@include media-down(sm) {
+	.mr-sm-0 {margin-right: 0px;}
+	.mr-sm-4 {margin-right: 16px;}
+	@each $name, $size in $spacers {
+		.mb-sm-#{$name} { margin-bottom: $size; }
+	}
+}
+
+.mr-auto {
+	margin-right: auto;
+}
+
+
+// padding tools
+
+@each $name, $size in $spacers {
+	.py-#{$name} { padding: $size 0; }
+	.px-#{$name} { padding: 0 $size; }
+}
+
+.pl-2 { padding-left: 8px; }
+.pr-2 { padding-right: 8px; }
+.pr-3 { padding-right: 3px; }
+.p-3 { padding: 3px; }
+.pb-12 { padding-bottom: 48px;}
+
+@include media-down(md) {
+	.px-md-3 { padding: 0 12px; }
+	.p-md-6 { padding: 24px; }
+	.py-md-4 { padding: 16px 0; }
+	.py-md-8 { padding: 32px 0; }
+	.pb-md-8 { padding-bottom: 32px; }
+}
+
+@include media-down(sm) {
+	.px-sm-3 { padding: 0 12px; }
+	.py-sm-3 { padding: 12px 0; }
+	.py-sm-8 { padding: 32px 0; }
+	.pb-sm-8 { padding-bottom: 32px; }
+}
+
+// decoration tool
+
+.section-decoration {
+    padding-bottom: 48px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid $neutral-300;
+
+	@include media-down(md) {
+		padding-bottom: 32px;
+		margin-bottom: 32px;
+	}
+}
+
+.li-decoration {
+	padding-left: 12px;
+	border-left: 1px solid $neutral-300;
+}

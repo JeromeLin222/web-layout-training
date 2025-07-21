@@ -1,0 +1,22 @@
+.btn {
+	border-radius: 4px;
+	padding: 12px 24px;
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	font: inherit;
+	
+	&-dark {
+		background-color: $neutral-900;
+		color: $neutral-0;
+	}
+
+	&-light {
+		background-color: $neutral-0;
+		border: 1px solid $neutral-900
+	}
+
+	@include media-down(sm) {
+		padding: 8px 12px;
+	}
+}

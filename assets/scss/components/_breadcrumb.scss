@@ -1,0 +1,27 @@
+.breadcrumb {
+	&-list {
+		display: flex;
+		font-weight: 500;
+		& + & {
+			&::before {
+				content: '/';
+				padding: 0 12px;
+				color: $neutral-300;
+				font-weight: 700;
+			
+				@include media-down(md) {
+					padding: 0 8px;
+				}
+			}
+		}
+		@include media-down(md) {
+			font-size: 14px;
+		}
+	}
+	
+	&-link {
+		color: $neutral-600;
+	}
+
+
+}
