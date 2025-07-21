@@ -7,7 +7,7 @@ body {
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0.05em;
-	color: var(--neutral-900)
+	color: $neutral-900;
 }
 
 
@@ -18,13 +18,12 @@ img {
 }
 
 a {
-	color: var(--neutral-900);
+	color: $neutral-900;
 	text-decoration: none;
 	display: block;
 	font-weight: 500;
-}
-
-a:hover {
-	transition: 0.3s;
-	transform: scale(1.05);
+	&:hover {
+		transition: 0.3s;
+		transform: scale(1.05);
+	}
 }
