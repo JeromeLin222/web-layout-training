@@ -1,0 +1,51 @@
+$primary-100: #f5fee7;
+$primary-200: #E8FEC5;
+$primary-300: #C0FA73;
+$primary-400: #57A203;
+$primary-500: #477A11; 
+$neutral-0: #FFFFFF;
+$neutral-100: #F8F9FA;
+$neutral-200: #E9ECEF;
+$neutral-300: #DEE2E6;
+$neutral-400: #CED4DA;
+$neutral-500: #ADB5BD;
+$neutral-600: #6C757D;
+$neutral-700: #495057;
+$neutral-800: #343A40;
+$neutral-900: #212529;
+$danger-300: #D74F4F;
+
+$grid-columns: 12 !default;
+$grid-gutter: 12px !default;
+$grid-gutter-mobile: 6px !default;
+
+$breakpoints: (
+    sm: 576px,
+    md: 768px
+) !default;
+
+$spacers: (
+    0: 0,
+    1: 4px,
+    2: 8px,
+    3: 12px,
+    4: 16px,
+    5: 20px,
+    6: 24px,
+    7: 28px,
+    8: 32px,
+    9: 36px,
+    10: 40px,
+    12: 48px,
+    16: 64px
+) !default;
+
+$font-sizes: (
+    h1: 40px,
+    h2: 32px,
+    h3: 28px,
+    h4: 24px,
+    h5: 20px,
+    h6: 16px,
+    sm: 14px
+) !default

@@ -1,9 +1,3 @@
-@mixin media-down($breakpoint: 768px) {
-	@media (max-width: $breakpoint) {
-		@content
-	}
-}
-
 .breadcrumb {
 	&-list {
 		display: flex;
@@ -15,12 +9,12 @@
 				color: $neutral-300;
 				font-weight: 700;
 			
-				@include media-down {
+				@include media-down(md) {
 					padding: 0 8px;
 				}
 			}
 		}
-		@include media-down {
+		@include media-down(md) {
 			font-size: 14px;
 		}
 	}

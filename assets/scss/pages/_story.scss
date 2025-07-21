@@ -3,32 +3,34 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    
+    @include media-down(md) {
+        & {
+            background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/hero-sm.png?raw=true);
+        }
+        
+    }
 }
 
 .hero-text {
     text-align: center;
     padding: 151px 0;
+    
+    @include media-down(md) {
+        padding: 87px 0;
+        p {
+            font-size: 20px;
+        }
+        
+    }
 }
 
-@media (max-width: 767px) {
-    .brand-hero {
-        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/hero-sm.png?raw=true);
-    }
-    .hero-text {
-        padding: 87px 0;
-    }
-    .hero-text p {
-        font-size: 20px;
-    }
-}
+
 
 .quote {
     border-radius: 12px;
     text-align: center;
-}
-
-@media (max-width: 767px) {
-    .quote {
+    @include media-down(md) {
         text-align: left;
     }
 }
