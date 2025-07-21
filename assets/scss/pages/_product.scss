@@ -19,12 +19,12 @@
 
 .size-btn {
     width: 160px;
-    border: 1px solid var(--neutral-300);
+    border: 1px solid $neutral-300;
 }
 
 .size-btn.active, 
 .size-btn:hover {
-    border: 1px solid var(--neutral-900);
+    border: 1px solid $neutral-900;
 }
 
 .size-btn.disable {
@@ -36,16 +36,16 @@
 }
 
 .action-btn .btn-light:hover {
-    background: var(--neutral-900);
-    color: var(--neutral-100);
+    background: $neutral-900;
+    color: $neutral-100;
 }
 
 .product-detail {
-    border-bottom: 1px solid var(--neutral-300);
+    border-bottom: 1px solid $neutral-300;
 }
 
 .product-detail p {
-    color: var(--neutral-600);
+    color: $neutral-600;
 }
 
 .product-detail-title {

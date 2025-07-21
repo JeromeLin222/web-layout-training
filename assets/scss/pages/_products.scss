@@ -1,5 +1,5 @@
 .category .active {
-    color: var(--primary-400);
+    color: $primary-400;
 }
 
 .pagination-item .btn{
@@ -12,13 +12,13 @@
 
 .pagination-item .active {
     font-weight: 500;
-    background-color: var(--primary-300);
+    background-color: $primary-300;
 }
 
 .category li a:hover {
-    color: var(--primary-400)
+    color: $primary-400;
 }
 
 .pagination-item .btn:hover {
-    background-color: var(--neutral-100);
+    background-color: $neutral-100;
 }

@@ -1,0 +1,24 @@
+.btn {
+	border-radius: 4px;
+	padding: 12px 24px;
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	font: inherit;
+}
+
+@media (max-width: 576px) {
+	.btn {
+		padding: 8px 12px;
+	}
+}
+
+.btn-dark {
+	background-color: $neutral-900;
+	color: $neutral-0;
+}
+
+.btn-light {
+	background-color: $neutral-0;
+	border: 1px solid $neutral-900;
+}

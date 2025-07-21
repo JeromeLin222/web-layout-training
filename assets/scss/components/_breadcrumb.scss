@@ -1,0 +1,24 @@
+.breadcrumb-list + .breadcrumb-list::before {
+	content: '/';
+	padding: 0 12px;
+	color: var(--neutral-300);
+	font-weight: 700;
+}
+
+.breadcrumb-list {
+	display: flex;
+	font-weight: 500;
+}
+
+.breadcrumb-link {
+	color: var(--neutral-600);
+}
+
+@media (max-width: 767px) {
+	.breadcrumb-lis + .breadcrumb-list::before {
+		padding: 0 8px;
+	}
+	.breadcrumb-lis {
+		font-size: 14px;
+	}
+}
