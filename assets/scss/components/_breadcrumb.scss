@@ -1,24 +1,33 @@
-.breadcrumb-list + .breadcrumb-list::before {
-	content: '/';
-	padding: 0 12px;
-	color: var(--neutral-300);
-	font-weight: 700;
-}
-
-.breadcrumb-list {
-	display: flex;
-	font-weight: 500;
-}
-
-.breadcrumb-link {
-	color: var(--neutral-600);
-}
-
-@media (max-width: 767px) {
-	.breadcrumb-lis + .breadcrumb-list::before {
-		padding: 0 8px;
+@mixin media-down($breakpoint: 768px) {
+	@media (max-width: $breakpoint) {
+		@content
 	}
-	.breadcrumb-lis {
-		font-size: 14px;
+}
+
+.breadcrumb {
+	&-list {
+		display: flex;
+		font-weight: 500;
+		& + & {
+			&::before {
+				content: '/';
+				padding: 0 12px;
+				color: $neutral-300;
+				font-weight: 700;
+			
+				@include media-down {
+					padding: 0 8px;
+				}
+			}
+		}
+		@include media-down {
+			font-size: 14px;
+		}
 	}
+	
+	&-link {
+		color: $neutral-600;
+	}
+
+
 }
