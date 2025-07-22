@@ -4,9 +4,9 @@
     }
 }
 
-@mixin make-col($size, $columns: $grid-columns) {
-    padding-left: $grid-gutter;
-    padding-right: $grid-gutter;
+@mixin make-col($size, $columns: $grid-columns, $gutter: $grid-gutter) {
+    padding-left: $gutter;
+    padding-right: $gutter;
     width: calc(100% / #{$columns} * #{$size});
 }
 

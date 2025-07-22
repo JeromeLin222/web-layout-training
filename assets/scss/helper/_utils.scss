@@ -45,11 +45,13 @@ $displays: (flex, none, block);
 }
 
 @include media-down(md) {
+	.d-md-flex { display: flex; }
 	.d-md-block { display: block; }
 	.d-md-none { display: none; }
 }
 
 @include media-down(sm) {
+	.d-sm-flex { display: flex; }
 	.d-sm-block { display: block; }
 	.d-sm-none { display: none; }
 }
@@ -73,9 +75,11 @@ $displays: (flex, none, block);
 .gap {
 	&-1 { gap: 4px; }
 	&-2 { gap: 8px; }
+	&-3 { gap: 12px; }
 	@include media-down(md) {
 		&-md-1 { gap: 4px; }
 		&-md-2 { gap: 8px; }
+		&-md-3 { gap: 12px; }
 	}
 }
 
@@ -107,6 +111,11 @@ $displays: (flex, none, block);
 	&-lg { font-size: 20px; }
 	&-md { font-size: 16px; }
 	&-sm {font-size: 14px; }
+	@include media-down(md) {
+		&-md-lg { font-size: 20px; }
+		&-md-md { font-size: 16px; }
+		&-md-sm { font-size: 14px; }
+	}
 }
 
 @include media-down(md) {
@@ -149,6 +158,7 @@ $text-colors: (
 $bg-colors: (
 	'primary-100': $primary-100,
 	'primary-200': $primary-200,
+	'primary-300': $primary-300,
 	'neutral-100': $neutral-100
 );
 

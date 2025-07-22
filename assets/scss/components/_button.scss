@@ -5,6 +5,7 @@
 	border: none;
 	background-color: transparent;
 	font: inherit;
+
 	
 	&-dark {
 		background-color: $neutral-900;
@@ -14,6 +15,15 @@
 	&-light {
 		background-color: $neutral-0;
 		border: 1px solid $neutral-900
+	}
+
+	&-primary {
+		background-color: $primary-300;
+	}
+	
+	&:hover {
+		transition: 0.25s;
+		transform: scale(1.05);
 	}
 
 	@include media-down(sm) {

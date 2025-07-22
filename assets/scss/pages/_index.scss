@@ -7,14 +7,105 @@
     }
 }
 
+
 @include media-down(md) {
-    .product-md-row {
-        margin-left: -8px;
-        margin-right: -8px;
+    .product-md {
+        &-row {
+            margin-left: -8px;
+            margin-right: -8px;
+        }
+        &-col {
+            min-width: 316px;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
     }
-    .product-md-col {
-        min-width: 316px;
-        padding-left: 8px;
-        padding-right: 8px;
+}
+
+.banner {
+    background: {
+        image: url(/assets/images/banner-co-branded.png);
+        repeat: no-repeat;
+        size: cover;
+        position: center; 
+    }
+    overflow: hidden;
+    padding: 100px 0; 
+    position: relative;
+
+    .star-img {
+        position: absolute;
+        width: 48px;
+        top: 48px;
+        left: calc(50% - 397px);
+    }
+    
+    .sparkle-img {
+        position: absolute;
+        width: 76px;
+        bottom: 132px;
+        right: calc(50% - 357px);
+    }
+    
+    @include media-down(md) {
+        padding: 64px 0;
+        background: {
+            image: url(/assets/images/banner-co-branded-sm.png)
+        }
+        .star-img {
+            top: 32px;
+            left: -20px;
+        }
+        .sparkle-img {
+            bottom: 104px;
+            right: -28px;
+        }
+    }
+}
+
+.category {
+    position: relative;
+    &-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(#000000, 0.4);
+    }
+}
+
+.inspiration {
+    &-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -4px;
+    }
+    &-col-4 {
+        width: calc(100% / 12 * 4);
+        padding: 4px;
+    }
+    &-col-6 {
+        width: calc(100% / 12 * 6);
+        padding: 4px;
+    }
+    &-col-12 {
+        width: 100%;
+        padding: 4px;
+    }
+    @include media-down(md) {
+        &-row {
+            flex-wrap: nowrap;
+            margin: 0 -8px;
+            img {
+                min-width: 300px;
+            }
+        }
+        &-col-4,
+        &-col-6,
+        &-col-12 {
+            width: unset;
+            padding: 0 8px;
+        }
     }
 }
