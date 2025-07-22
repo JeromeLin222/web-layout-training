@@ -1,0 +1,20 @@
+.product {
+    position: relative;
+    &-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+@include media-down(md) {
+    .product-md-row {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    .product-md-col {
+        min-width: 316px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
