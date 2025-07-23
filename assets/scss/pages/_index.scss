@@ -6,6 +6,17 @@
         position: center;
     }
     padding: 289px 0;
+    &-content {
+        margin-left: 15%;
+    }
+
+    @include media-down(md) {
+        background-image: url(/assets/images/banner-sm.png);
+        padding: 155px 24px;
+        &-content {
+            margin-left: 0;
+        }
+    }
 }
 
 .product {
