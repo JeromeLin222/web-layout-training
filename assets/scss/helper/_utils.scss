@@ -71,6 +71,11 @@ $displays: (flex, none, block);
 		&-md-wrap { flex-wrap: wrap; }
 		&-md-nowrap { flex-wrap: nowrap; }
 	}
+	@include media-down(sm) {
+		&-sm-column { flex-direction: column; }
+		&-sm-wrap { flex-wrap: wrap; }
+		&-sm-nowrap { flex-wrap: nowrap; }
+	}
 }
 
 .gap {
