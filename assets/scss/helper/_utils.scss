@@ -64,11 +64,17 @@ $displays: (flex, none, block);
 .flex {
 	&-column { flex-direction: column; }
 	&-wrap { flex-wrap: wrap; }
-	&-nowrap{ flex-wrap: nowrap; }
+	&-nowrap { flex-wrap: nowrap; }
+	&-grow-1 { flex: 1;}
 	@include media-down(md) {
 		&-md-column { flex-direction: column; }
 		&-md-wrap { flex-wrap: wrap; }
 		&-md-nowrap { flex-wrap: nowrap; }
+	}
+	@include media-down(sm) {
+		&-sm-column { flex-direction: column; }
+		&-sm-wrap { flex-wrap: wrap; }
+		&-sm-nowrap { flex-wrap: nowrap; }
 	}
 }
 
@@ -138,6 +144,7 @@ $displays: (flex, none, block);
 $text-colors: (
 	'primary-300': $primary-300,
 	'primary-400': $primary-400,
+	'primary-500': $primary-500,
 	'neutral-0': $neutral-0,
 	'neutral-400': $neutral-400,
 	'neutral-500': $neutral-500,
@@ -153,7 +160,17 @@ $text-colors: (
 	}
 }
 
-.text-center { text-align: center;}
+
+.text {
+	&-start { text-align: start; }
+	&-center { text-align: center;}
+	&-end { text-align: end;}
+	@include media-down(md) {
+		&-md-start { text-align: start; }
+		&-md-center { text-align: center;}
+		&-md-end { text-align: end;}
+	}
+}
 
 $bg-colors: (
 	'primary-100': $primary-100,
@@ -193,6 +210,9 @@ $bg-colors: (
 .mr-auto {
 	margin-right: auto;
 }
+.ml-auto {
+	margin-left: auto;
+}
 
 
 // padding tools
@@ -209,9 +229,11 @@ $bg-colors: (
 }
 
 .pl-2 { padding-left: 8px; }
+.pl-4 { padding-left: 16px; }
 .pr-2 { padding-right: 8px; }
 .pr-3 { padding-right: 3px; }
 .p-3 { padding: 3px; }
+.pb-8 { padding-bottom: 32px; }
 .pb-12 { padding-bottom: 48px;}
 
 @include media-down(md) {
