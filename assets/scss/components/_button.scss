@@ -23,10 +23,34 @@
 	
 	&:hover {
 		transition: 0.25s;
-		transform: scale(1.05);
+		transform: scale(1.025);
 	}
 
 	@include media-down(sm) {
 		padding: 8px 12px;
 	}
+}
+
+.enroll-btn {
+    padding-top: 12px;
+	padding-bottom: 12px;
+    width: 50%;
+    border-bottom: 1px solid $neutral-300;
+    &:hover {
+        color: $neutral-900;
+        transform: scale(1);
+        border-bottom: 2px solid $neutral-900;
+    }
+    &-active {
+        color: $neutral-900;
+        border-bottom: 2px solid $neutral-900;
+    }
+}
+
+.login-btn {
+    padding: 12px;
+    width: 100%;
+    background: $neutral-0;
+    border: 1px solid $neutral-300;
+    border-radius: 4px;
 }
