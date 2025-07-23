@@ -45,11 +45,13 @@ $displays: (flex, none, block);
 }
 
 @include media-down(md) {
+	.d-md-flex { display: flex; }
 	.d-md-block { display: block; }
 	.d-md-none { display: none; }
 }
 
 @include media-down(sm) {
+	.d-sm-flex { display: flex; }
 	.d-sm-block { display: block; }
 	.d-sm-none { display: none; }
 }
@@ -58,28 +60,62 @@ $displays: (flex, none, block);
 .justify-between { justify-content: space-between; }
 .justify-center { justify-content: center; }
 .align-center { align-items: center; }
-.flex-wrap { flex-wrap: wrap; }
 
-.gap-8 { gap: 8px; }
+.flex {
+	&-column { flex-direction: column; }
+	&-wrap { flex-wrap: wrap; }
+	&-nowrap{ flex-wrap: nowrap; }
+	@include media-down(md) {
+		&-md-column { flex-direction: column; }
+		&-md-wrap { flex-wrap: wrap; }
+		&-md-nowrap { flex-wrap: nowrap; }
+	}
+}
+
+.gap {
+	&-1 { gap: 4px; }
+	&-2 { gap: 8px; }
+	&-3 { gap: 12px; }
+	@include media-down(md) {
+		&-md-1 { gap: 4px; }
+		&-md-2 { gap: 8px; }
+		&-md-3 { gap: 12px; }
+	}
+}
+
+// overflow
+@include media-down(md) {
+	.overflow-x-md-auto {
+		overflow-x: auto;
+	}
+}
 
 
 // text style
 @each $name, $size in $font-sizes {
 	.#{$name} {
 		font-size: $size;
-		@if $name != 'sm' {
-			font-weight: 700;
-			line-height: 1.2;
-		} @else {
-			font-weight: 400;
-			line-height: 1.5;
-		}
+		font-weight: 700;
+		line-height: 1.2;
 	}
 }
 
-.text-md {
-	font-weight: 400;
-	line-height: 1.5;
+
+.text {
+	&-lg,
+	&-md,
+	&-sm {
+		font-weight: 400;
+		line-height: 1.5;
+	}
+	&-lg { font-size: 20px; }
+	&-md { font-size: 16px; }
+	&-sm {font-size: 14px; }
+	@include media-down(md) {
+		&-md-lg { font-size: 20px; }
+		&-md-md { font-size: 16px; }
+		&-md-sm { font-size: 14px; }
+	}
 }
 
 @include media-down(md) {
@@ -100,8 +136,10 @@ $displays: (flex, none, block);
 
 
 $text-colors: (
-	'neutral-0': $neutral-0,
+	'primary-300': $primary-300,
 	'primary-400': $primary-400,
+	'neutral-0': $neutral-0,
+	'neutral-400': $neutral-400,
 	'neutral-500': $neutral-500,
 	'neutral-600': $neutral-600,
 	'neutral-900': $neutral-900,
@@ -120,6 +158,7 @@ $text-colors: (
 $bg-colors: (
 	'primary-100': $primary-100,
 	'primary-200': $primary-200,
+	'primary-300': $primary-300,
 	'neutral-100': $neutral-100
 );
 
@@ -159,8 +198,14 @@ $bg-colors: (
 // padding tools
 
 @each $name, $size in $spacers {
-	.py-#{$name} { padding: $size 0; }
-	.px-#{$name} { padding: 0 $size; }
+	.py-#{$name} { 
+		padding-top: $size;
+		padding-bottom: $size; 
+	}
+	.px-#{$name} { 
+		padding-left: $size;
+		padding-right: $size; 
+	}
 }
 
 .pl-2 { padding-left: 8px; }
@@ -170,17 +215,51 @@ $bg-colors: (
 .pb-12 { padding-bottom: 48px;}
 
 @include media-down(md) {
-	.px-md-3 { padding: 0 12px; }
 	.p-md-6 { padding: 24px; }
-	.py-md-4 { padding: 16px 0; }
-	.py-md-8 { padding: 32px 0; }
+	.px-md-3 { 
+		padding-left: 12px;
+		padding-right: 12px; 
+	}
+	.py-md-4 { 
+		padding-top: 16px;
+		padding-bottom: 16px; 
+	}
+	.py-md-6 { 
+		padding-top: 24px;
+		padding-bottom: 24px; 
+	}
+	.py-md-8 { 
+		padding-top: 32px;
+		padding-bottom: 32px; 
+	}
+	.py-md-10 {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
 	.pb-md-8 { padding-bottom: 32px; }
 }
 
 @include media-down(sm) {
-	.px-sm-3 { padding: 0 12px; }
-	.py-sm-3 { padding: 12px 0; }
-	.py-sm-8 { padding: 32px 0; }
+	.px-sm-3 { 
+		padding-left: 12px; 
+		padding-right: -12px;
+	}
+	.py-sm-3 { 
+		padding-top: 12px; 
+		padding-bottom: 12px;
+	}
+	.py-sm-4 {
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+	.py-sm-6 {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+	.py-sm-8 { 
+		padding-top: 32px; 
+		padding-bottom: 32px;
+	}
 	.pb-sm-8 { padding-bottom: 32px; }
 }
 
