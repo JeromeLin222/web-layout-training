@@ -27,6 +27,14 @@
 	}
 }
 
+// large pad(lg)
+@include media-down(lg) {
+	.col-md-1 { @include make-col-responsive(1); }
+	.col-md-2 { @include make-col-responsive(2); }
+	.col-md-3 { @include make-col-responsive(3); }
+	.col-md-4 { @include make-col-responsive(4); }
+}
+
 // mobile grid
 @include media-down(md) {
 	.col-md-1 { @include make-col-responsive(1); }
@@ -42,6 +50,12 @@ $displays: (flex, none, block);
 	.d-#{$display} {
 		display: $display
 	}
+}
+
+@include media-down(lg) {
+	.d-lg-flex { display: flex; }
+	.d-lg-block { display: block; }
+	.d-lg-none { display: none; }
 }
 
 @include media-down(md) {
