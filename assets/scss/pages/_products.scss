@@ -18,10 +18,23 @@
         &:hover {
             background-color: $neutral-100;
         }
+        &:disabled {
+            cursor: default;
+            opacity: 0.5;
+            color: $neutral-400;
+            &:hover {
+                background-color: transparent;
+                transform: none;
+            }
+        }
     }
 
     .active {
         font-weight: 500;
         background-color: $primary-300;
+        &:hover {
+            background-color: $primary-300;
+            transform: none;
+        }
     }
 }
